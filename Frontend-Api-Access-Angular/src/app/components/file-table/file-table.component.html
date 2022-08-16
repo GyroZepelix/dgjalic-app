@@ -1,0 +1,29 @@
+<div>
+<table class="fileTable">
+    <tr><th>{{fileOwner.id}}</th></tr>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Content</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let file of theFiles">
+        <th>{{file.id}}</th>
+        <th>{{file.docName}}</th>
+        <th>{{file.docType}}</th>
+        <th>{{file.docSize}}</th>
+        <th><app-button name="&dArr;" color="#68d7ed" (buttonPressedEvent)="fileDL(file.id)"></app-button></th>
+        <th><app-button name="🗑" color="#c92e2e" (buttonPressedEvent)="fileDEL(file.id)"></app-button></th>
+    </tr>
+
+    
+</table>
+
+<div>
+    <app-input type="file" #uploadField></app-input>
+    <app-button name="Upload" color="#edca6b" invert="true" (buttonPressedEvent)="fileADD()"></app-button>
+</div>
+
+</div>

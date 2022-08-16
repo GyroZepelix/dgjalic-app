@@ -1,0 +1,6 @@
+<main>
+    <div class="fileCustomerFlex">
+        <app-table (fileAccessedEvent)="showFile($event)" ></app-table>
+        <app-file-table #fileTable [ngStyle]="{'display': displayFile ? 'block':'none'}"></app-file-table>
+    </div>
+</main>

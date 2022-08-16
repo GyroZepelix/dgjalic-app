@@ -1,0 +1,11 @@
+figure img {
+    width: 130px;
+    height: 130px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    background-color: #3D6B64;
+    height: 100%;
+}

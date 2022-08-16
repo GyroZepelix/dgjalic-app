@@ -1,0 +1,46 @@
+<div>
+
+
+<table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Active</th>
+            <th>Files</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    <tr *ngFor="let customer of customers">
+        <th>{{customer.id}}</th>
+        <th>{{customer.firstName}}</th>
+        <th>{{customer.lastName}}</th>
+        <th [style.color]="customer.active ? 'green' : 'red'">{{customer.active}}</th>
+        <th><app-button name="&crarr;" (buttonPressedEvent)="showFile(customer.id)"></app-button></th>
+        <th><app-button name="&#10004;" color="#4543bf" (buttonPressedEvent)="editCust(customer.id)"></app-button></th>
+        <th><app-button name="🗑" color="#c92e2e" (buttonPressedEvent)="deleteCust(customer.id)"></app-button></th>
+    </tr>
+</table>
+
+<app-button name="Add new Customer" color="#edca6b" invert="true" (buttonPressedEvent)="addCust()"></app-button>
+
+<table [style.display]="isEditVisible ? 'block' : 'none'">
+    <tr>
+    <th>{{tableMode}}</th>    
+    </tr>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Active</th>
+        <th>Apply</th>
+    </tr>
+    <tr>
+        <th>{{editedCustomer.id}}</th>
+        <th><app-input type="text" name="name" value="{{editedCustomer.firstName}}" #EFN></app-input></th>
+        <th><app-input type="text" name="surname" value = "{{editedCustomer.lastName}}" #ELN></app-input></th>
+        <th><app-input type="checkbox" name="active" value = "{{editedCustomer.active}}" #EA></app-input></th>
+        <th><app-button name="&#10004;" (buttonPressedEvent)="acceptEdit(editedCustomer.id)"></app-button></th>
+    </tr>
+</table>
+</div>

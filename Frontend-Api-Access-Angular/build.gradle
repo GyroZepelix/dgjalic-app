@@ -1,0 +1,16 @@
+plugins {
+  id 'java'
+  id("com.github.node-gradle.node") version "2.2.0"
+}
+
+node {
+  version = '16.16.0'
+  npmVersion = '7.0.0'
+  download = true
+}
+
+jar.dependsOn 'npm_run_build'
+
+jar {
+  from 'dist/Frontend-Api-Access-Angular' into 'static'
+}

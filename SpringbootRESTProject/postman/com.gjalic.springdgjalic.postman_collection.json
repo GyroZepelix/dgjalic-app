@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "155cec34-531f-458d-bf43-38aa1277702b",
+		"name": "com.gjalic.springdgjalic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22419676"
+	},
+	"item": [
+		{
+			"name": "Get Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SpringAddress}}/customers",
+					"host": [
+						"{{SpringAddress}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"gergre\",\r\n    \"lastName\": \"Trgregt2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SpringAddress}}/customers",
+					"host": [
+						"{{SpringAddress}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace a Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Replace\",\r\n    \"lastName\": \"Replace2\",\r\n    \"active\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SpringAddress}}/customers/:CustomerID",
+					"host": [
+						"{{SpringAddress}}"
+					],
+					"path": [
+						"customers",
+						":CustomerID"
+					],
+					"variable": [
+						{
+							"key": "CustomerID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SpringAddress}}/customers/:CustomerID",
+					"host": [
+						"{{SpringAddress}}"
+					],
+					"path": [
+						"customers",
+						":CustomerID"
+					],
+					"variable": [
+						{
+							"key": "CustomerID",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SpringAddress}}/customers/:CustomerID",
+					"host": [
+						"{{SpringAddress}}"
+					],
+					"path": [
+						"customers",
+						":CustomerID"
+					],
+					"variable": [
+						{
+							"key": "CustomerID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customers by Active",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SpringAddress}}/customers/query?active=yes",
+					"host": [
+						"{{SpringAddress}}"
+					],
+					"path": [
+						"customers",
+						"query"
+					],
+					"query": [
+						{
+							"key": "active",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Files to Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/dgjalic/Desktop/NeedLearn.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{SpringAddress}}/customers/:ID/files",
+					"host": [
+						"{{SpringAddress}}"
+					],
+					"path": [
+						"customers",
+						":ID",
+						"files"
+					],
+					"query": [
+						{
+							"key": "files",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "ID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "SpringAddress",
+			"value": "localhost:8080"
+		}
+	]
+}

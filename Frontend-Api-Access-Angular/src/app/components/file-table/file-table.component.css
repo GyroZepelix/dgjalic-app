@@ -1,0 +1,22 @@
+table {
+    background-color: #ebd98d;
+    border: 3px solid #b9824e;
+    border-collapse: collapse;
+    box-shadow: 0.6em 0.6em #3D6B64;
+}
+
+table tr th {
+    border: 2px solid #b9824e;
+    padding: 0.2em 1em;
+}
+
+th {
+    font-size: 16px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}

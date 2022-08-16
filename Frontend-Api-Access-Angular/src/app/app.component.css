@@ -1,0 +1,74 @@
+* {
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+}
+
+.mainBody {
+    display: grid;
+    grid-template-columns: 150px calc(100% - 150px);
+    grid-template-rows: 150px;
+    
+
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+
+
+header select {
+
+    background: #ebd98d;
+    border: 1px solid #b9824e;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    min-height: 40px;
+    padding: 0px 10px;
+    outline: 0;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+
+}
+
+header {
+    background-color: #59A88E;
+    text-align: center;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+app-main {
+    grid-column: 1 / -1;
+}
+
+
+
+.flex-two {
+    display: flex;
+    justify-content: space-around;
+    gap: 2.5em;
+}
+
+.fileTable {
+    /* display: none; */
+}
+

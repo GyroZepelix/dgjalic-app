@@ -1,0 +1,21 @@
+main {
+    padding-top: 100px;
+    background-color: #c5d3a7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: calc(100vh - 150px);
+
+}
+
+.fileCustomerFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+}

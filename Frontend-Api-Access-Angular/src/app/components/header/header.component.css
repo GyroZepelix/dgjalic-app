@@ -1,0 +1,25 @@
+.flex-two {
+  display: flex;
+  justify-content: space-around;
+  gap: 2.5em;
+  align-items: center;
+}
+
+header {
+  height: 100%;
+  background-color: #59A88E;
+  text-align: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
